@@ -72,3 +72,64 @@ body {
     @apply h-px w-full bg-gradient-to-r from-transparent via-gold-400/40 to-transparent;
   }
 }
+
+/* ------- Propuesta / Deck ------- */
+.propuesta {
+  background: #0a0a0a;
+  min-height: 100vh;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.slide {
+  width: 1280px;
+  height: 720px;
+  background: #050505;
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 25px 80px -20px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(212, 175, 55, 0.08);
+}
+
+@media (max-width: 1340px) {
+  .slide {
+    transform: scale(calc(100vw / 1340));
+    transform-origin: top center;
+    margin-bottom: calc(720px * (1 - 100vw / 1340) * -1);
+  }
+}
+
+@media print {
+  @page {
+    size: 1280px 720px;
+    margin: 0;
+  }
+  html, body {
+    background: #050505 !important;
+  }
+  .propuesta {
+    padding: 0;
+    gap: 0;
+    background: #050505 !important;
+  }
+  .slide {
+    border-radius: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+    margin: 0 !important;
+    transform: none !important;
+  }
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
