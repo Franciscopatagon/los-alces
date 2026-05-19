@@ -294,7 +294,7 @@ export default function PropuestaPage() {
           <div className="space-y-6 text-white/85 text-lg">
             <p>
               La web va a tener <span className="gold-text">3 espacios</span>{" "}
-              reservados para sponsors o Google AdSense.
+              reservados para sponsors de la marca.
             </p>
             <ul className="space-y-3">
               <Li>Banner superior en home.</Li>
@@ -302,9 +302,9 @@ export default function PropuestaPage() {
               <Li>Banner inferior en estadísticas.</Li>
             </ul>
             <p className="text-white/60 text-base">
-              La tarifa por sponsor se define según el tráfico web.
-              Cuando crezca la audiencia, se activan y empiezan a generar
-              ingresos en automático.
+              La tarifa por sponsor se define según el tráfico web. Cuando
+              crezca la audiencia, se activan y empiezan a generar ingresos
+              extra para el club.
             </p>
           </div>
 
