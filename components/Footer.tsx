@@ -52,8 +52,7 @@ export function Footer() {
         <div className="container-x flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
           <span>© {new Date().getFullYear()} Alces FC · alsfc.com</span>
           <span>
-            Hecho con orgullo en Patagonia ·{" "}
-            <span className="text-gold-300/80">Demo Patagon Digital</span>
+            <span className="text-gold-300/80">Demo · Propuesta MVP 2026</span>
           </span>
         </div>
       </div>

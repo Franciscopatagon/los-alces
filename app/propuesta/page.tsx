@@ -66,9 +66,9 @@ function Slide({
       <footer className="absolute bottom-8 left-16 right-16 flex items-center justify-between text-[10px] uppercase tracking-[0.4em] text-white/30">
         <div className="flex items-center gap-3">
           <Logo size={22} />
-          <span>Patagon Digital × Alces FC</span>
+          <span>Alces FC · 2026</span>
         </div>
-        <span>alsfc.com · Propuesta MVP 2026</span>
+        <span>alsfc.com · Propuesta MVP</span>
       </footer>
     </section>
   );
@@ -104,13 +104,8 @@ export default function PropuestaPage() {
         <div className="absolute inset-0 px-16 flex flex-col justify-between py-20">
           <div className="flex items-center justify-between">
             <Logo size={64} />
-            <div className="text-right">
-              <div className="heading text-2xl text-white tracking-[0.2em]">
-                PATAGON <span className="gold-text">DIGITAL</span>
-              </div>
-              <div className="text-[10px] uppercase tracking-[0.4em] text-white/40 mt-1">
-                Estudio de desarrollo web
-              </div>
+            <div className="text-right text-[10px] uppercase tracking-[0.4em] text-white/40">
+              alsfc.com
             </div>
           </div>
 
@@ -138,8 +133,8 @@ export default function PropuestaPage() {
 
       {/* 2 — Resumen ejecutivo */}
       <Slide n={2} eyebrow="Resumen ejecutivo" title="La propuesta, en 30 segundos">
-        <div className="grid grid-cols-[1fr_auto] gap-12 items-center h-full">
-          <p className="text-3xl text-white/85 leading-snug">
+        <div className="flex flex-col h-full justify-between">
+          <p className="text-2xl text-white/85 leading-snug max-w-5xl">
             Construimos una web profesional para Alces FC que permite a sus
             fans <span className="gold-text">hacerse socios</span> pagando una
             cuota mensual, <span className="gold-text">comprar productos</span>
@@ -147,12 +142,11 @@ export default function PropuestaPage() {
             del equipo — todo integrado con Mercado Pago y conectado al
             Discord del club.
           </p>
-          <div className="w-px h-72 bg-gradient-to-b from-transparent via-gold-400/40 to-transparent" />
-        </div>
-        <div className="absolute bottom-32 left-16 right-16 grid grid-cols-3 gap-6">
-          <Big stat="10-14" sub="días de entrega" />
-          <Big stat="20 hs" sub="de desarrollo" />
-          <Big stat="MVP" sub="100% funcional" />
+          <div className="grid grid-cols-3 gap-6">
+            <Big stat="10-14" sub="días de entrega" />
+            <Big stat="20 hs" sub="de desarrollo" />
+            <Big stat="MVP" sub="100% funcional" />
+          </div>
         </div>
       </Slide>
 
@@ -324,7 +318,7 @@ export default function PropuestaPage() {
 
       {/* 8 — Stack tecnológico */}
       <Slide n={8} eyebrow="Stack tecnológico" title="Qué usamos y para qué">
-        <div className="grid grid-cols-3 gap-4 text-sm">
+        <div className="grid grid-cols-4 grid-rows-2 gap-3 h-full text-xs">
           <Tool
             name="Google Workspace"
             desc="Mails con dominio propio (@alsfc.com) + Drive, Calendar y Docs."
@@ -332,7 +326,7 @@ export default function PropuestaPage() {
           />
           <Tool
             name="Mercado Pago"
-            desc="Cobra suscripciones y compras con tarjeta, débito, efectivo o transferencia."
+            desc="Cobra suscripciones y compras con tarjeta, débito o transferencia."
             cost="% por venta"
           />
           <Tool
@@ -342,7 +336,7 @@ export default function PropuestaPage() {
           />
           <Tool
             name="Supabase"
-            desc="Base de datos: guarda usuarios, suscripciones, productos, estadísticas."
+            desc="Base de datos: usuarios, suscripciones, productos, estadísticas."
             cost="Gratis al inicio · USD 25/mes con escala"
             highlight
           />
@@ -353,23 +347,22 @@ export default function PropuestaPage() {
           />
           <Tool
             name="Vercel"
-            desc="Servidor donde la web vive online 24/7, con escalado automático."
+            desc="Servidor donde la web vive online 24/7."
             cost="Gratis al inicio"
           />
           <Tool
             name="PostHog"
-            desc="Analítica avanzada: qué hacen los usuarios, dónde abandonan, qué convierte."
+            desc="Analítica: qué hacen los usuarios, dónde abandonan."
             cost="Gratis"
-            wide
           />
-          <div className="card p-5 col-span-2 bg-ink-900/60">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-gold-300/80">
+          <div className="card p-4 bg-ink-900/60">
+            <div className="text-[9px] uppercase tracking-[0.3em] text-gold-300/80">
               Glosario rápido
             </div>
-            <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-white/70">
-              <li><b className="text-white">Dominio</b>: la dirección de la web (alsfc.com).</li>
-              <li><b className="text-white">Base de datos</b>: caja fuerte digital de la info.</li>
-              <li><b className="text-white">Hosting</b>: dónde "vive" prendida la web.</li>
+            <ul className="mt-2 space-y-1 text-[11px] text-white/70 leading-snug">
+              <li><b className="text-white">Dominio</b>: la dirección de la web.</li>
+              <li><b className="text-white">Base de datos</b>: caja fuerte digital.</li>
+              <li><b className="text-white">Hosting</b>: dónde "vive" la web.</li>
               <li><b className="text-white">Mercado Pago</b>: Posnet online.</li>
             </ul>
           </div>
@@ -413,7 +406,7 @@ export default function PropuestaPage() {
       </Slide>
 
       {/* 10 — Resumen de costos */}
-      <Slide n={10} eyebrow="Costos operativos" title="¿Cuánto sale tenerla online?">
+      <Slide n={10} eyebrow="Costos operativos" title="Costos al detalle">
         <div className="grid grid-cols-3 gap-5">
           <CostCard
             title="Mensual al arrancar"
@@ -490,7 +483,6 @@ export default function PropuestaPage() {
               </h3>
             </div>
             <ul className="space-y-2.5 text-white/60 text-sm">
-              <Li dim>App móvil.</Li>
               <Li dim>Sistema de envíos propio (es dropshipping).</Li>
               <Li dim>Integración automática con proveedores vía API.</Li>
               <Li dim>Estadísticas en tiempo real (son semanales).</Li>
@@ -586,11 +578,13 @@ export default function PropuestaPage() {
             <div className="mt-6 heading text-3xl text-white">
               Francisco Mana
             </div>
-            <div className="text-gold-300 text-sm mt-1">Patagon Digital</div>
+            <div className="text-gold-300 text-sm mt-1">
+              Desarrollo Web · eCommerce
+            </div>
             <div className="mt-6 space-y-2 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-gold-400" />
-                francisco@patagon.agency
+                Mail directo
               </div>
               <div className="flex items-center gap-2">
                 <MessageCircle size={14} className="text-gold-400" />
@@ -724,24 +718,24 @@ function Tool({
   desc,
   cost,
   highlight,
-  wide,
 }: {
   name: string;
   desc: string;
   cost: string;
   highlight?: boolean;
-  wide?: boolean;
 }) {
   return (
     <div
-      className={`card p-5 ${
+      className={`card p-4 flex flex-col ${
         highlight ? "border-gold-400/50 bg-gold-400/5" : "bg-ink-900/60"
-      } ${wide ? "col-span-1" : ""}`}
+      }`}
     >
-      <div className="heading text-xl text-white">{name}</div>
-      <p className="mt-2 text-white/65 leading-snug">{desc}</p>
-      <div className="mt-4 hairline" />
-      <div className="mt-3 text-[11px] uppercase tracking-[0.2em] text-gold-300">
+      <div className="heading text-base text-white leading-tight">{name}</div>
+      <p className="mt-1.5 text-white/65 leading-snug text-[11px] flex-1">
+        {desc}
+      </p>
+      <div className="mt-2 hairline" />
+      <div className="mt-2 text-[10px] uppercase tracking-[0.2em] text-gold-300 leading-tight">
         {cost}
       </div>
     </div>
